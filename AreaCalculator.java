@@ -9,7 +9,7 @@ import java.lang.Math;//Imports math functions.
 
 public class AreaCalculator {
 	
-	static Scanner scanner = new Scanner(System.in);//Static will not be interacting with objects.
+	static Scanner scanner = new Scanner(System.in);//Static declares that this will not be interacting with objects.
 	public static void main(String[] args){//void will not return any values.
 
 		//Declaration of variables that will be used. 
@@ -26,7 +26,8 @@ public class AreaCalculator {
 
 		//Look the program unless user input ends the program. 
 		while (startAgain == true){
-			System.out.print("\nEnter the number of the object you wish to calculate: ");//print prints without a new line
+
+			System.out.print("\n ~Enter the number of the object you wish to calculate: ");//print prints without a new line
 			objectToCalculate = scanner.nextInt();
 			//Calculations for area of a Rectangle/Square.
 			if (objectToCalculate == 1){
@@ -78,24 +79,33 @@ public class AreaCalculator {
 				area = 4 * Math.PI * Math.pow(radius, 2);
 				System.out.println("The area of your sphere is: " + area);
 			}
-			//If number does not coorispond with one of the calculations ask if user would like to try again.
-			else{
+			//If number does not coorispond with one of the calculations, ask if user would like to try again.
+			/*else{//Else loop prints as well as the final ask to continue. Removed until fixed 
 				System.out.println("Please enter a number that is on the list.");
-				System.out.println("Would you like to try again?");
-			}
+				System.out.print("Would you like to try again? (y/n)");
+				String userContinueInput = scanner.next();
+				
+				//If the user input is y continue to run the program, else quit.
+				if (userContinueInput.equals("y")){
+					startAgain = true;
+				}
+				else{
+					startAgain = false;
+				}
+			}*/
 			//After calculation ask if the user would like to enter another calculation.
-			System.out.println("Would you like to calculate the area of another object? (y/n): ");
-			String userContinueInput = scanner.nextLine();
+			System.out.print("Would you like to calculate the area of another object? (y/n): ");
+			String userContinueInput = scanner.next();
+
 			//If the user input is y continue to run the program, else quit.
-			
-			if (userContinueInput == "y"){
+			if (userContinueInput.equals("y")){
 				startAgain = true;
 			}
 			else{
 				startAgain = false;
 			}
 			
-		}
+		}//While loop ends above this line.
 
 	}
 }
