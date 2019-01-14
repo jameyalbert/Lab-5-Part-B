@@ -51,13 +51,26 @@ public class AreaCalculator {
 			System.out.println("The area of your circle is: " + area);
 		}
 		else if (objectToCalculate == 4){
-			System.out.print("");
+			System.out.print("Enter the cube's edge: ");
+			edge = scanner.nextDouble();
+			area = 6 * Math.pow(edge, 2);
+			System.out.println("The area of your cube is: " + area);
 		}
+		//Calculations for the area of a Cone
 		else if (objectToCalculate == 5){
-			System.out.print("");
+			System.out.print("Enter the cone's radius: ");
+			radius = scanner.nextDouble();
+			System.out.print("Enter the cone's height: ");
+			height = scanner.nextDouble();
+			area = Math.PI * radius * (radius + Math.sqrt(Math.pow(height, 2)+ Math.pow(radius, 2)));
+			System.out.println("The area of your cone is: " + area);
 		}
+		//Calculations for the area of a Sphere
 		else if (objectToCalculate == 6){
-			System.out.print("");
+			System.out.print("Enter the sphere's radius: ");
+			radius = scanner.nextDouble();
+			area = 4 * Math.PI * Math.pow(radius, 2);
+			System.out.println("The area of your sphere is: " + area);
 		}
 		else{
 			System.out.println("Please enter a number that is on the list.");
