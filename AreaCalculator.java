@@ -84,7 +84,7 @@ public class AreaCalculator {
 				System.out.println("Would you like to try again?");
 			}
 			//After calculation ask if the user would like to enter another calculation.
-			System.out.print("Would you like to calculate the area of another object? (y/n): ");
+			System.out.println("Would you like to calculate the area of another object? (y/n): ");
 			String userContinueInput = scanner.nextLine();
 			//If the user input is y continue to run the program, else quit.
 			
