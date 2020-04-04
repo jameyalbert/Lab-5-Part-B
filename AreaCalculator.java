@@ -20,7 +20,7 @@ public class AreaCalculator {
 		double edge;
 		double area;
 		Boolean startAgain = true;
-
+		System.out.println("Hello from Jamey!");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~AREA CALCULATOR~~~~~~~~~~~~~~~~~~~~~");//Prints with a new line at the end hence the ln(line)
 		System.out.println("1. Area of a Rectangle/square\n2. Area of a Triangle\n3. Area of a Circle\n4. Area of a Cube\n5. Area of a Cone\n6. Area of Sphere");
 
